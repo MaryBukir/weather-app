@@ -3,6 +3,9 @@ import axios from "axios";
 
 function App() {
 
+  const [data, setData] = useState({});
+  const [location, setLocation] = useState('');
+
   // const url = `https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=1ea16ea4c9b44c6553072e400bbea74c`;
   return (
     <div className="app">
@@ -10,7 +13,7 @@ function App() {
         <input 
         value={location}
         onChange={event => setLocation(event.target.value)}
-        onKeyPress={searchLocation}
+        // onKeyPress={searchLocation}
         placeholder='Enter Location'
         type="text"
         />
